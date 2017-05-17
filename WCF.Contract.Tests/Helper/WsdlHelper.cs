@@ -28,7 +28,7 @@
             {
                 using (XmlReader expectedReader = new XmlNodeReader(expectedXml))
                 {
-                    var xmlDiff = new XmlDiff(XmlDiffOptions.IgnoreNamespaces | XmlDiffOptions.IgnoreXmlDecl);
+                    var xmlDiff = new XmlDiff(XmlDiffOptions.IgnoreNamespaces | XmlDiffOptions.IgnoreXmlDecl | XmlDiffOptions.IgnoreChildOrder);
 
                     diffGramXml = new XmlDocument();
                     using (var diffGramWriter = diffGramXml.CreateNavigator().AppendChild())
